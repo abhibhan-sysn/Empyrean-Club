@@ -49,6 +49,12 @@ h2.animated-title {
   animation: rotateIn 1.2s ease-out 0.5s backwards;
 }
 
+.subheading {
+  color: #4169E1; /* Blue for subheadings */
+  margin-top: 15px;
+  animation: bounceIn 1.2s ease-out;
+}
+
 #top-menu {
   background: #800080;
   padding: 10px 0;
@@ -101,11 +107,6 @@ section.animated-section {
   animation: slideInUp 1.2s ease-out forwards;
 }
 
-h3.animated-title {
-  color: #4169E1;
-  animation: bounceIn 1.2s ease-out;
-}
-
 p.animated-text {
   animation: slideInLeft 1.2s ease-out;
 }
@@ -120,12 +121,6 @@ ol.animated-list li, ul.animated-list li {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-}
-
-.bearer-category {
-  width: 100%;
-  font-weight: bold;
-  color: #4169E1;
 }
 
 .bearer {

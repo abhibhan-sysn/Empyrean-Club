@@ -5,6 +5,7 @@ body {
   padding: 0;
   color: #333;
   line-height: 1.6;
+  position: relative;
 }
 
 header {
@@ -284,25 +285,54 @@ ol.animated-list li, ul.animated-list li {
   text-decoration: underline;
 }
 
-.recruitment-form {
-  margin-top: 20px;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+#ai-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
-.recruitment-form h3 {
-  color: #800080;
-  margin-bottom: 10px;
+.ai-assistant {
+  background: #800080;
+  color: #FFF;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-.recruitment-form .form-link {
+.ai-assistant i {
+  margin-right: 5px;
+}
+
+.ai-assistant:hover {
+  transform: scale(1.1);
+}
+
+#join-link {
+  background: #FFF;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+}
+
+#join-link.hidden {
+  display: none;
+}
+
+#join-link a {
   color: #800080;
   text-decoration: none;
-  font-size: 1.1rem;
 }
 
-.recruitment-form .form-link:hover {
+#join-link a:hover {
   text-decoration: underline;
 }
 
@@ -318,31 +348,31 @@ footer {
 /* Dramatic Animations */
 @keyframes bounceIn {
   0% { opacity: 0; transform: scale(0.3) translateY(2000px); }
-  60% { opacity: 1; transform: scale(1.1); }
-  80% { transform: scale(0.9); }
-  100% { transform: scale(1) translateY(0); }
+  60% { opacity: 0.8; transform: scale(1.1); }
+  80% { transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 @keyframes rotateIn {
-  0% { opacity: 0; transform: rotate(-200deg); }
-  100% { opacity: 1; transform: rotate(0); }
+  0% { opacity: 0; transform: rotate(-180deg) scale(0.5); }
+  100% { opacity: 1; transform: rotate(0) scale(1); }
 }
 
 @keyframes slideInUp {
-  0% { opacity: 0; transform: translateY(100px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% { opacity: 0; transform: translateY(100px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @keyframes slideInLeft {
-  0% { opacity: 0; transform: translateX(-100px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% { opacity: 0; transform: translateX(-100px) rotate(-10deg); }
+  100% { opacity: 1; transform: translateX(0) rotate(0); }
 }
 
 @keyframes bounceInUp {
-  0% { opacity: 0; transform: translateY(200px); }
-  60% { opacity: 1; transform: translateY(-20px); }
-  80% { transform: translateY(10px); }
-  100% { transform: translateY(0); }
+  0% { opacity: 0; transform: translateY(200px) scale(0.8); }
+  60% { opacity: 0.9; transform: translateY(-30px) scale(1.1); }
+  80% { transform: translateY(10px) scale(0.98); }
+  100% { transform: translateY(0) scale(1); }
 }
 
 .animated-section {
